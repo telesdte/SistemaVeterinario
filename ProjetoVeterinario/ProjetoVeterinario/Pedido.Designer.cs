@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pedido));
             this.lblPlano = new System.Windows.Forms.Label();
             this.lblRaça = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@
             // 
             this.lblPlano.AutoSize = true;
             this.lblPlano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlano.ForeColor = System.Drawing.Color.White;
             this.lblPlano.Location = new System.Drawing.Point(617, 333);
             this.lblPlano.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPlano.Name = "lblPlano";
@@ -71,6 +73,7 @@
             // 
             this.lblRaça.AutoSize = true;
             this.lblRaça.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRaça.ForeColor = System.Drawing.Color.White;
             this.lblRaça.Location = new System.Drawing.Point(16, 455);
             this.lblRaça.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRaça.Name = "lblRaça";
@@ -80,50 +83,66 @@
             // 
             // btnSair
             // 
+            this.btnSair.BackColor = System.Drawing.Color.DarkRed;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(773, 260);
+            this.btnSair.ForeColor = System.Drawing.Color.White;
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSair.Location = new System.Drawing.Point(779, 261);
             this.btnSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(96, 39);
+            this.btnSair.Size = new System.Drawing.Size(154, 39);
             this.btnSair.TabIndex = 66;
             this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnCalcular
             // 
+            this.btnCalcular.BackColor = System.Drawing.Color.Goldenrod;
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(594, 403);
+            this.btnCalcular.ForeColor = System.Drawing.Color.White;
+            this.btnCalcular.Image = ((System.Drawing.Image)(resources.GetObject("btnCalcular.Image")));
+            this.btnCalcular.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCalcular.Location = new System.Drawing.Point(556, 405);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(155, 39);
+            this.btnCalcular.Size = new System.Drawing.Size(235, 39);
             this.btnCalcular.TabIndex = 65;
             this.btnCalcular.Text = "Calcular Orçamento";
-            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.UseVisualStyleBackColor = false;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnSalvar
             // 
+            this.btnSalvar.BackColor = System.Drawing.Color.Green;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(630, 260);
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.Location = new System.Drawing.Point(606, 261);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(96, 39);
+            this.btnSalvar.Size = new System.Drawing.Size(154, 39);
             this.btnSalvar.TabIndex = 64;
             this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovo
             // 
+            this.btnNovo.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.Location = new System.Drawing.Point(480, 261);
+            this.btnNovo.ForeColor = System.Drawing.Color.White;
+            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
+            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovo.Location = new System.Drawing.Point(406, 261);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(120, 39);
+            this.btnNovo.Size = new System.Drawing.Size(178, 39);
             this.btnNovo.TabIndex = 63;
             this.btnNovo.Text = "Nova Consulta";
-            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // txtCodPedido
@@ -150,6 +169,7 @@
             // 
             this.lblPesquisar.AutoSize = true;
             this.lblPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesquisar.ForeColor = System.Drawing.Color.White;
             this.lblPesquisar.Location = new System.Drawing.Point(539, 20);
             this.lblPesquisar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPesquisar.Name = "lblPesquisar";
@@ -161,6 +181,7 @@
             // 
             this.lblValor.AutoSize = true;
             this.lblValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValor.ForeColor = System.Drawing.Color.White;
             this.lblValor.Location = new System.Drawing.Point(616, 457);
             this.lblValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValor.Name = "lblValor";
@@ -170,18 +191,20 @@
             // 
             // txtValor
             // 
-            this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtValor.Location = new System.Drawing.Point(606, 476);
             this.txtValor.Margin = new System.Windows.Forms.Padding(4);
             this.txtValor.Name = "txtValor";
             this.txtValor.ReadOnly = true;
-            this.txtValor.Size = new System.Drawing.Size(132, 22);
+            this.txtValor.Size = new System.Drawing.Size(132, 31);
             this.txtValor.TabIndex = 58;
             // 
             // lblIdade
             // 
             this.lblIdade.AutoSize = true;
             this.lblIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdade.ForeColor = System.Drawing.Color.White;
             this.lblIdade.Location = new System.Drawing.Point(18, 71);
             this.lblIdade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdade.Name = "lblIdade";
@@ -224,6 +247,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.White;
             this.lblNome.Location = new System.Drawing.Point(16, 11);
             this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
@@ -257,6 +281,7 @@
             this.gbTipo.Controls.Add(this.rbGato);
             this.gbTipo.Controls.Add(this.rbCachorro);
             this.gbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbTipo.ForeColor = System.Drawing.Color.White;
             this.gbTipo.Location = new System.Drawing.Point(12, 139);
             this.gbTipo.Margin = new System.Windows.Forms.Padding(4);
             this.gbTipo.Name = "gbTipo";
@@ -269,6 +294,7 @@
             // rbAve
             // 
             this.rbAve.AutoSize = true;
+            this.rbAve.ForeColor = System.Drawing.Color.White;
             this.rbAve.Location = new System.Drawing.Point(7, 99);
             this.rbAve.Name = "rbAve";
             this.rbAve.Size = new System.Drawing.Size(52, 20);
@@ -281,6 +307,7 @@
             // rbGato
             // 
             this.rbGato.AutoSize = true;
+            this.rbGato.ForeColor = System.Drawing.Color.White;
             this.rbGato.Location = new System.Drawing.Point(7, 73);
             this.rbGato.Name = "rbGato";
             this.rbGato.Size = new System.Drawing.Size(58, 20);
@@ -293,6 +320,7 @@
             // rbCachorro
             // 
             this.rbCachorro.AutoSize = true;
+            this.rbCachorro.ForeColor = System.Drawing.Color.White;
             this.rbCachorro.Location = new System.Drawing.Point(7, 47);
             this.rbCachorro.Name = "rbCachorro";
             this.rbCachorro.Size = new System.Drawing.Size(88, 20);
@@ -306,6 +334,7 @@
             // 
             this.lblPorte.AutoSize = true;
             this.lblPorte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPorte.ForeColor = System.Drawing.Color.White;
             this.lblPorte.Location = new System.Drawing.Point(9, 385);
             this.lblPorte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPorte.Name = "lblPorte";
@@ -328,6 +357,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.lblPlano);
             this.Controls.Add(this.lblRaça);
@@ -351,8 +381,10 @@
             this.Controls.Add(this.lblPorte);
             this.Controls.Add(this.cmbPorte);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Pedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedido";
             this.Load += new System.EventHandler(this.Pedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPesquisa)).EndInit();
