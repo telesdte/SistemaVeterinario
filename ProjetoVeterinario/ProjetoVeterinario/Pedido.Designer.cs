@@ -47,11 +47,11 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.dgvPesquisa = new System.Windows.Forms.DataGridView();
             this.gbTipo = new System.Windows.Forms.GroupBox();
-            this.chkTipo3 = new System.Windows.Forms.CheckBox();
-            this.chkTipo2 = new System.Windows.Forms.CheckBox();
-            this.chkTipo1 = new System.Windows.Forms.CheckBox();
             this.lblPorte = new System.Windows.Forms.Label();
             this.cmbPorte = new System.Windows.Forms.ComboBox();
+            this.rbCachorro = new System.Windows.Forms.RadioButton();
+            this.rbGato = new System.Windows.Forms.RadioButton();
+            this.rbAve = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPesquisa)).BeginInit();
             this.gbTipo.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +71,7 @@
             // 
             this.lblRaça.AutoSize = true;
             this.lblRaça.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRaça.Location = new System.Drawing.Point(19, 212);
+            this.lblRaça.Location = new System.Drawing.Point(16, 414);
             this.lblRaça.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRaça.Name = "lblRaça";
             this.lblRaça.Size = new System.Drawing.Size(116, 16);
@@ -99,6 +99,7 @@
             this.btnCalcular.TabIndex = 65;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnSalvar
             // 
@@ -206,7 +207,7 @@
             // 
             this.cmbRaça.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRaça.FormattingEnabled = true;
-            this.cmbRaça.Location = new System.Drawing.Point(16, 231);
+            this.cmbRaça.Location = new System.Drawing.Point(13, 433);
             this.cmbRaça.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbRaça.Name = "cmbRaça";
             this.cmbRaça.Size = new System.Drawing.Size(230, 24);
@@ -243,11 +244,11 @@
             // 
             // gbTipo
             // 
-            this.gbTipo.Controls.Add(this.chkTipo3);
-            this.gbTipo.Controls.Add(this.chkTipo2);
-            this.gbTipo.Controls.Add(this.chkTipo1);
+            this.gbTipo.Controls.Add(this.rbAve);
+            this.gbTipo.Controls.Add(this.rbGato);
+            this.gbTipo.Controls.Add(this.rbCachorro);
             this.gbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTipo.Location = new System.Drawing.Point(23, 283);
+            this.gbTipo.Location = new System.Drawing.Point(12, 139);
             this.gbTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbTipo.Name = "gbTipo";
             this.gbTipo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -256,44 +257,11 @@
             this.gbTipo.TabStop = false;
             this.gbTipo.Text = "Tipo de Animal";
             // 
-            // chkTipo3
-            // 
-            this.chkTipo3.AutoSize = true;
-            this.chkTipo3.Location = new System.Drawing.Point(20, 94);
-            this.chkTipo3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.chkTipo3.Name = "chkTipo3";
-            this.chkTipo3.Size = new System.Drawing.Size(61, 20);
-            this.chkTipo3.TabIndex = 4;
-            this.chkTipo3.Text = "Aves";
-            this.chkTipo3.UseVisualStyleBackColor = true;
-            // 
-            // chkTipo2
-            // 
-            this.chkTipo2.AutoSize = true;
-            this.chkTipo2.Location = new System.Drawing.Point(20, 69);
-            this.chkTipo2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.chkTipo2.Name = "chkTipo2";
-            this.chkTipo2.Size = new System.Drawing.Size(67, 20);
-            this.chkTipo2.TabIndex = 3;
-            this.chkTipo2.Text = "Gatos";
-            this.chkTipo2.UseVisualStyleBackColor = true;
-            // 
-            // chkTipo1
-            // 
-            this.chkTipo1.AutoSize = true;
-            this.chkTipo1.Location = new System.Drawing.Point(20, 41);
-            this.chkTipo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.chkTipo1.Name = "chkTipo1";
-            this.chkTipo1.Size = new System.Drawing.Size(97, 20);
-            this.chkTipo1.TabIndex = 2;
-            this.chkTipo1.Text = "Cachorros";
-            this.chkTipo1.UseVisualStyleBackColor = true;
-            // 
             // lblPorte
             // 
             this.lblPorte.AutoSize = true;
             this.lblPorte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPorte.Location = new System.Drawing.Point(12, 142);
+            this.lblPorte.Location = new System.Drawing.Point(9, 344);
             this.lblPorte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPorte.Name = "lblPorte";
             this.lblPorte.Size = new System.Drawing.Size(116, 16);
@@ -304,11 +272,47 @@
             // 
             this.cmbPorte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPorte.FormattingEnabled = true;
-            this.cmbPorte.Location = new System.Drawing.Point(16, 162);
+            this.cmbPorte.Location = new System.Drawing.Point(13, 364);
             this.cmbPorte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbPorte.Name = "cmbPorte";
             this.cmbPorte.Size = new System.Drawing.Size(230, 24);
             this.cmbPorte.TabIndex = 48;
+            // 
+            // rbCachorro
+            // 
+            this.rbCachorro.AutoSize = true;
+            this.rbCachorro.Location = new System.Drawing.Point(7, 47);
+            this.rbCachorro.Name = "rbCachorro";
+            this.rbCachorro.Size = new System.Drawing.Size(88, 20);
+            this.rbCachorro.TabIndex = 0;
+            this.rbCachorro.TabStop = true;
+            this.rbCachorro.Text = "Cachorro";
+            this.rbCachorro.UseVisualStyleBackColor = true;
+            this.rbCachorro.CheckedChanged += new System.EventHandler(this.rbCachorro_CheckedChanged);
+            // 
+            // rbGato
+            // 
+            this.rbGato.AutoSize = true;
+            this.rbGato.Location = new System.Drawing.Point(7, 73);
+            this.rbGato.Name = "rbGato";
+            this.rbGato.Size = new System.Drawing.Size(58, 20);
+            this.rbGato.TabIndex = 1;
+            this.rbGato.TabStop = true;
+            this.rbGato.Text = "Gato";
+            this.rbGato.UseVisualStyleBackColor = true;
+            this.rbGato.CheckedChanged += new System.EventHandler(this.rbGato_CheckedChanged);
+            // 
+            // rbAve
+            // 
+            this.rbAve.AutoSize = true;
+            this.rbAve.Location = new System.Drawing.Point(7, 99);
+            this.rbAve.Name = "rbAve";
+            this.rbAve.Size = new System.Drawing.Size(52, 20);
+            this.rbAve.TabIndex = 2;
+            this.rbAve.TabStop = true;
+            this.rbAve.Text = "Ave";
+            this.rbAve.UseVisualStyleBackColor = true;
+            this.rbAve.CheckedChanged += new System.EventHandler(this.rbAve_CheckedChanged);
             // 
             // Pedido
             // 
@@ -340,6 +344,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Pedido";
             this.Text = "Pedido";
+            this.Load += new System.EventHandler(this.Pedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPesquisa)).EndInit();
             this.gbTipo.ResumeLayout(false);
             this.gbTipo.PerformLayout();
@@ -369,10 +374,10 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.DataGridView dgvPesquisa;
         private System.Windows.Forms.GroupBox gbTipo;
-        private System.Windows.Forms.CheckBox chkTipo3;
-        private System.Windows.Forms.CheckBox chkTipo2;
-        private System.Windows.Forms.CheckBox chkTipo1;
         private System.Windows.Forms.Label lblPorte;
         private System.Windows.Forms.ComboBox cmbPorte;
+        private System.Windows.Forms.RadioButton rbAve;
+        private System.Windows.Forms.RadioButton rbGato;
+        private System.Windows.Forms.RadioButton rbCachorro;
     }
 }
