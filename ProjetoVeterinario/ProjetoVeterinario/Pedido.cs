@@ -250,9 +250,9 @@ namespace ProjetoVeterinario
             rbCachorro.Checked = false;
             rbGato.Checked = false;
             rbAve.Checked = false;
-            cmbPorte.SelectedIndex = 0;
-            cmbRaça.SelectedIndex = -0;
-            cmbTipo.SelectedIndex = -0;
+            cmbPorte.SelectedIndex = -1;
+            cmbRaça.SelectedIndex = -1;
+            cmbTipo.SelectedIndex = -1;
             txtCodPedido.Clear();
             txtPesquisar.Clear();
             txtValor.Clear();
