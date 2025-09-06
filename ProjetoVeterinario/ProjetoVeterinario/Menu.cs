@@ -16,5 +16,12 @@ namespace ProjetoVeterinario
         {
             InitializeComponent();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Pedido pedido = new Pedido();
+            pedido.Show();
+            this.Hide();
+        }
     }
 }
