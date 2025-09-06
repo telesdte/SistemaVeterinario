@@ -5,28 +5,39 @@ namespace ProjetoVeterinario
 {
     internal class Conexao
     {
-        private MySqlConnection Con;
+        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=dbveterinario;user=root;pwd=123456");
 
-        public Conexao()
-        {
-            Con = new MySqlConnection("Data Source=localhost;Initial Catalog=dbveterinario;user=root;pwd=123456");
-        }
+        public static string msg;
 
-        public MySqlConnection ConectarBD()
+        public MySqlConnection ConnectarBD()
         {
-            if (Con.State == System.Data.ConnectionState.Closed)
+            try
             {
-                Con.Open();
+                con.Open();
+
             }
-            return Con;
+            catch (Exception erro)
+            {
+
+                msg = "Ocorreu um erro ao se conectar" + erro.Message;
+            }
+            return con;
         }
 
-        public void DesconectarBD()
+        public MySqlConnection DesConnectarBD()
         {
-            if (Con.State == System.Data.ConnectionState.Open)
+            try
             {
-                Con.Close();
+                con.Close();
+
             }
+            catch (Exception erro)
+            {
+
+                msg = "Ocorreu um erro ao se conectar" + erro.Message;
+            }
+            return con;
         }
+
     }
 }

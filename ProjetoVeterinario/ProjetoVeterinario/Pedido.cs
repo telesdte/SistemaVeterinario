@@ -143,7 +143,7 @@ namespace ProjetoVeterinario
                 try
                 {
                     string sql = "insert into tbplano(Nome,Idade,Porte,Raca,Plano,Tipo,Total) values(@Nome,@Idade,@Porte,@Raca,@Plano,@Tipo,@Total)";
-                    MySqlCommand cmd = new MySqlCommand(sql, con.ConectarBD());
+                    MySqlCommand cmd = new MySqlCommand(sql, con.ConnectarBD());
                     cmd.Parameters.Add("@Nome", MySqlDbType.Text).Value = txtNome.Text;
                     cmd.Parameters.Add("@Idade", MySqlDbType.Int32).Value =int.Parse(txtIdade.Text);
                     cmd.Parameters.Add("@Porte", MySqlDbType.Text).Value = cmbPorte.Text;
@@ -156,14 +156,14 @@ namespace ProjetoVeterinario
                     MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNome.Text = "";
                     txtIdade.Text = "";
-                    rbCachorro.Enabled = false;
-                    rbGato.Enabled = false;
-                    rbAve.Enabled = false;
-                    cmbPorte.Enabled = false;
-                    cmbRaça.Enabled = false;
-                    cmbTipo.Enabled = false;
+                    rbCachorro.Checked = false;
+                    rbGato.Checked = false;
+                    rbAve.Checked = false;
+                    cmbPorte.SelectedIndex = 0;
+                    cmbRaça.SelectedIndex = 0;
+                    cmbTipo.SelectedIndex = 0;
                     txtNome.Focus();
-                    con.DesconectarBD();
+                    con.DesConnectarBD();
                 }
                 catch (Exception erro)
                 {
@@ -204,17 +204,17 @@ namespace ProjetoVeterinario
             {
                 try
                 {
-                    con.ConectarBD();
+                    con.ConnectarBD();
                     MySqlCommand cmd = new MySqlCommand();
                     cmd.CommandText = "select * from tbplano";
 
-                    cmd.Connection = con.ConectarBD();
+                    cmd.Connection = con.ConnectarBD();
                     MySqlDataAdapter da = new MySqlDataAdapter();
                     DataTable dt = new DataTable();
                     da.SelectCommand = cmd;
                     da.Fill(dt);
                     dgvPesquisa.DataSource = dt;
-                    con.DesconectarBD();
+                    con.DesConnectarBD();
                 }
                 catch (Exception error)
                 {
@@ -247,12 +247,12 @@ namespace ProjetoVeterinario
         {
             txtNome.Clear();
             txtIdade.Clear();
-            rbCachorro.Enabled = false;
-            rbGato.Enabled = false;
-            rbAve.Enabled = false;
-            cmbPorte.SelectedIndex = -1;
-            cmbRaça.SelectedIndex = -1;
-            cmbTipo.SelectedIndex = -1;
+            rbCachorro.Checked = false;
+            rbGato.Checked = false;
+            rbAve.Checked = false;
+            cmbPorte.SelectedIndex = 0;
+            cmbRaça.SelectedIndex = -0;
+            cmbTipo.SelectedIndex = -0;
             txtCodPedido.Clear();
             txtPesquisar.Clear();
             txtValor.Clear();
