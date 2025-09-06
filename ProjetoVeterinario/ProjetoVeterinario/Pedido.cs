@@ -119,7 +119,13 @@ namespace ProjetoVeterinario
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             //VERIFICAÇÃO DOS CAMPOS
-
+            //VERIFICA SE A IDADE INSERIDA É TIPO INT
+            if (!int.TryParse(txtIdade.Text, out int idade))
+            {
+                MessageBox.Show("Idade inválida! Digite apenas números inteiros.");
+                txtIdade.Focus();
+                return;
+            }
             // VERIFICA SE ALGUM ITEM FOI SELECIONADO NO CMBPORTE
             if (cmbPorte.SelectedIndex == -1)
             {
@@ -145,7 +151,7 @@ namespace ProjetoVeterinario
                     string sql = "insert into tbplano(Nome,Idade,Porte,Raca,Plano,Tipo,Total) values(@Nome,@Idade,@Porte,@Raca,@Plano,@Tipo,@Total)";
                     MySqlCommand cmd = new MySqlCommand(sql, con.ConnectarBD());
                     cmd.Parameters.Add("@Nome", MySqlDbType.Text).Value = txtNome.Text;
-                    cmd.Parameters.Add("@Idade", MySqlDbType.Int32).Value =int.Parse(txtIdade.Text);
+                    cmd.Parameters.Add("@Idade", MySqlDbType.Int32).Value = idade;
                     cmd.Parameters.Add("@Porte", MySqlDbType.Text).Value = cmbPorte.Text;
                     cmd.Parameters.Add("@Raca", MySqlDbType.Text).Value = cmbRaça.Text;
                     cmd.Parameters.Add("@Plano", MySqlDbType.Text).Value = cmbTipo.Text;
