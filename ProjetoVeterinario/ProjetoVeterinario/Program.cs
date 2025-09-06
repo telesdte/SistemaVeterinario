@@ -16,7 +16,7 @@ namespace ProjetoVeterinario
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pedido());
+            Application.Run(new Menu());
         }
     }
 }
