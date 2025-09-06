@@ -20,14 +20,13 @@ namespace ProjetoVeterinario
         private void Pedido_Load(object sender, EventArgs e)
         {
             //TAMANHO PET
-            cmbPorte.Items.Add("Pequeno");
-            cmbPorte.Items.Add("Médio");
-            cmbPorte.Items.Add("Grande");
+            cmbPorte.Items.Add("Pequeno (R$20,00)");
+            cmbPorte.Items.Add("Médio (R$30,00)");
+            cmbPorte.Items.Add("Grande (R$40,00)");
             //PLANO
-            cmbTipo.Items.Add("Básico");
-            cmbTipo.Items.Add("Integral");
-            cmbTipo.Items.Add("Preferencial");
-
+            cmbTipo.Items.Add("Básico (R$50,00)");
+            cmbTipo.Items.Add("Integral (R$100,00)");
+            cmbTipo.Items.Add("Preferencial (R$150,00)");
 
         }
 
@@ -71,6 +70,7 @@ namespace ProjetoVeterinario
             txtValor.Text = valorTotal.ToString("C");
         }
 
+        //ESCOLHA DA RAÇA DO ANIMAL (IRRELEVANTE NO VALOR TOTAL)
         private void rbCachorro_CheckedChanged(object sender, EventArgs e)
         {
             if (rbCachorro.Checked)
