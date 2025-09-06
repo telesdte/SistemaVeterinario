@@ -1,42 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 namespace ProjetoVeterinario
 {
     internal class Conexao
     {
-        MySqlConnection Con = new MySqlConnection("Data Source=localhost;Initial Catalog=B;user=DBPROJETOVET;pwd=123456");
+        private MySqlConnection Con;
 
-        public static string msg;
-
-        public MySqlConnection ConnectarBD()
+        public Conexao()
         {
-            try
+            Con = new MySqlConnection("Data Source=localhost;Initial Catalog=dbveterinario;user=root;pwd=123456");
+        }
+
+        public MySqlConnection ConectarBD()
+        {
+            if (Con.State == System.Data.ConnectionState.Closed)
             {
                 Con.Open();
-            }
-            catch (Exception erro)
-            {
-                msg = "ocorreu um erro ao se conectar" + erro.Message;
             }
             return Con;
         }
 
-        public MySqlConnection DesconnectarBD()
+        public void DesconectarBD()
         {
-            try
+            if (Con.State == System.Data.ConnectionState.Open)
             {
                 Con.Close();
             }
-            catch(Exception erro)
-            {
-                msg = "ocorreu um erro ao se conectar" + erro.Message;
-            }
-            return Con;
         }
     }
 }

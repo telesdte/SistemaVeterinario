@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -14,6 +8,7 @@ namespace ProjetoVeterinario
     public partial class Pedido : Form
     {
         Conexao con = new Conexao();
+
         //VARIÁVEL TEMPORÁRIA PARA ARMAZENAR O TIPO DE ANIMAL SELECIONADO
         private string tipoAnimal = "";
 
@@ -147,14 +142,15 @@ namespace ProjetoVeterinario
                 //INSERINDO OS DADOS NO SQL
                 try
                 {
-                    string sql = "intert into tbplano(Nome,Idade,Porte,Raca,Plano,Tipo) values(@Nome,@Idade,@Porte,@Raca,@Plano,@Tipo)";
-                    MySqlCommand cmd = new MySqlCommand(sql, con.ConnectarBD());
-                    cmd.Parameters.Add("@Nome", MySqlDbType.VarChar).Value = txtNome;
-                    cmd.Parameters.Add("@Idade", MySqlDbType.Text).Value = txtIdade;
-                    cmd.Parameters.Add("@Porte", MySqlDbType.VarChar).Value = cmbPorte;
-                    cmd.Parameters.Add("@Raca", MySqlDbType.VarChar).Value = cmbRaça;
-                    cmd.Parameters.Add("@Plano", MySqlDbType.VarChar).Value = cmbTipo;
-                    cmd.Parameters.Add("@Tipo", MySqlDbType.VarChar).Value = tipoAnimal;
+                    string sql = "insert into tbplano(Nome,Idade,Porte,Raca,Plano,Tipo,Total) values(@Nome,@Idade,@Porte,@Raca,@Plano,@Tipo,@Total)";
+                    MySqlCommand cmd = new MySqlCommand(sql, con.ConectarBD());
+                    cmd.Parameters.Add("@Nome", MySqlDbType.Text).Value = txtNome.Text;
+                    cmd.Parameters.Add("@Idade", MySqlDbType.Int32).Value =int.Parse(txtIdade.Text);
+                    cmd.Parameters.Add("@Porte", MySqlDbType.Text).Value = cmbPorte.Text;
+                    cmd.Parameters.Add("@Raca", MySqlDbType.Text).Value = cmbRaça.Text;
+                    cmd.Parameters.Add("@Plano", MySqlDbType.Text).Value = cmbTipo.Text;
+                    cmd.Parameters.Add("@Tipo", MySqlDbType.Text).Value = tipoAnimal;
+                    cmd.Parameters.Add("@Total", MySqlDbType.Decimal).Value = Convert.ToDecimal(txtValor.Text.Replace("R$", ""));
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -167,7 +163,7 @@ namespace ProjetoVeterinario
                     cmbRaça.Enabled = false;
                     cmbTipo.Enabled = false;
                     txtNome.Focus();
-                    con.DesconnectarBD();
+                    con.DesconectarBD();
                 }
                 catch (Exception erro)
                 {
@@ -208,16 +204,17 @@ namespace ProjetoVeterinario
             {
                 try
                 {
-                    con.ConnectarBD();
+                    con.ConectarBD();
                     MySqlCommand cmd = new MySqlCommand();
-                    cmd.CommandText = "select from * tbplano";
+                    cmd.CommandText = "select * from tbplano";
 
-                    cmd.Connection = con.ConnectarBD();
+                    cmd.Connection = con.ConectarBD();
                     MySqlDataAdapter da = new MySqlDataAdapter();
                     DataTable dt = new DataTable();
+                    da.SelectCommand = cmd;
                     da.Fill(dt);
                     dgvPesquisa.DataSource = dt;
-                    con.DesconnectarBD();
+                    con.DesconectarBD();
                 }
                 catch (Exception error)
                 {
