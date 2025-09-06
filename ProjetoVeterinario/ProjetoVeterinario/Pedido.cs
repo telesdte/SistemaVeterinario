@@ -176,5 +176,90 @@ namespace ProjetoVeterinario
 
             }
         }
+
+        private void dgvPesquisa_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            CarregarPedidos();
+        }
+
+        //MÉTODO PARA CARREGAR AS INFORMAÇÕES NO DATAGRID
+        public void CarregarPedidos()
+        {
+            try
+            {
+                txtCodPedido.Text = dgvPesquisa.SelectedRows[0].Cells[0].Value.ToString();
+                txtNome.Text = dgvPesquisa.SelectedRows[0].Cells[1].Value.ToString();
+                txtIdade.Text = dgvPesquisa.SelectedRows[0].Cells[2].Value.ToString();
+                string tipoAnimal = dgvPesquisa.SelectedRows[0].Cells[3].Value.ToString();
+                cmbPorte.Text = dgvPesquisa.SelectedRows[0].Cells[4].Value.ToString();
+                cmbRaça.Text = dgvPesquisa.SelectedRows[0].Cells[4].Value.ToString();
+                cmbTipo.Text = dgvPesquisa.SelectedRows[0].Cells[4].Value.ToString();
+                txtValor.Text = dgvPesquisa.SelectedRows[0].Cells[4].Value.ToString();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erros ao clicar" + erro);
+            }
+        }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPesquisar.Text != "")
+            {
+                try
+                {
+                    con.ConnectarBD();
+                    MySqlCommand cmd = new MySqlCommand();
+                    cmd.CommandText = "select from * tbplano";
+
+                    cmd.Connection = con.ConnectarBD();
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dgvPesquisa.DataSource = dt;
+                    con.DesconnectarBD();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            }
+            else
+            {
+                //LIMPA O DATAGRID
+                dgvPesquisa.DataSource = null;
+            }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            DialogResult sair = MessageBox.Show("Deseja Sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (sair == DialogResult.No)
+            {
+                Pedido ped = new Pedido();
+                ped.Show();
+                this.Hide();
+            }
+            else
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            txtNome.Clear();
+            txtIdade.Clear();
+            rbCachorro.Enabled = false;
+            rbGato.Enabled = false;
+            rbAve.Enabled = false;
+            cmbPorte.SelectedIndex = -1;
+            cmbRaça.SelectedIndex = -1;
+            cmbTipo.SelectedIndex = -1;
+            txtCodPedido.Clear();
+            txtPesquisar.Clear();
+            txtValor.Clear();
+            txtNome.Focus();
+        }
     }
 }

@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Matheus\\Desktop\\Veterinario\\ProjetoVeterinario\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E23B2E4E-3B34-4524-BF0E-56D76EDB3BE2}|ProjetoVeterinario\\ProjetoVeterinario.csproj|c:\\users\\matheus\\desktop\\veterinario\\projetoveterinario\\projetoveterinario\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E23B2E4E-3B34-4524-BF0E-56D76EDB3BE2}|ProjetoVeterinario\\ProjetoVeterinario.csproj|solutionrelative:projetoveterinario\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E23B2E4E-3B34-4524-BF0E-56D76EDB3BE2}|ProjetoVeterinario\\ProjetoVeterinario.csproj|c:\\users\\matheus\\desktop\\veterinario\\projetoveterinario\\projetoveterinario\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E23B2E4E-3B34-4524-BF0E-56D76EDB3BE2}|ProjetoVeterinario\\ProjetoVeterinario.csproj|solutionrelative:projetoveterinario\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E23B2E4E-3B34-4524-BF0E-56D76EDB3BE2}|ProjetoVeterinario\\ProjetoVeterinario.csproj|c:\\users\\matheus\\desktop\\veterinario\\projetoveterinario\\projetoveterinario\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E23B2E4E-3B34-4524-BF0E-56D76EDB3BE2}|ProjetoVeterinario\\ProjetoVeterinario.csproj|solutionrelative:projetoveterinario\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E23B2E4E-3B34-4524-BF0E-56D76EDB3BE2}|ProjetoVeterinario\\ProjetoVeterinario.csproj|c:\\users\\matheus\\desktop\\veterinario\\projetoveterinario\\projetoveterinario\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E23B2E4E-3B34-4524-BF0E-56D76EDB3BE2}|ProjetoVeterinario\\ProjetoVeterinario.csproj|solutionrelative:projetoveterinario\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E23B2E4E-3B34-4524-BF0E-56D76EDB3BE2}|ProjetoVeterinario\\ProjetoVeterinario.csproj|c:\\users\\matheus\\desktop\\veterinario\\projetoveterinario\\projetoveterinario\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -26,37 +26,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Pedido.cs",
               "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\Veterinario\\ProjetoVeterinario\\ProjetoVeterinario\\Pedido.cs",
               "RelativeDocumentMoniker": "ProjetoVeterinario\\Pedido.cs",
               "ToolTip": "C:\\Users\\Matheus\\Desktop\\Veterinario\\ProjetoVeterinario\\ProjetoVeterinario\\Pedido.cs*",
               "RelativeToolTip": "ProjetoVeterinario\\Pedido.cs*",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAYwIoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAuwAUBAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-06T17:41:01.842Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Conexao.cs",
               "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\Veterinario\\ProjetoVeterinario\\ProjetoVeterinario\\Conexao.cs",
               "RelativeDocumentMoniker": "ProjetoVeterinario\\Conexao.cs",
-              "ToolTip": "C:\\Users\\Matheus\\Desktop\\Veterinario\\ProjetoVeterinario\\ProjetoVeterinario\\Conexao.cs",
-              "RelativeToolTip": "ProjetoVeterinario\\Conexao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Matheus\\Desktop\\Veterinario\\ProjetoVeterinario\\ProjetoVeterinario\\Conexao.cs*",
+              "RelativeToolTip": "ProjetoVeterinario\\Conexao.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-06T17:37:56.175Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Pedido.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\Veterinario\\ProjetoVeterinario\\ProjetoVeterinario\\Pedido.cs",
               "RelativeDocumentMoniker": "ProjetoVeterinario\\Pedido.cs",

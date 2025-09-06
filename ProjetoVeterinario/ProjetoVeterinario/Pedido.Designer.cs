@@ -88,6 +88,7 @@
             this.btnSair.TabIndex = 66;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnCalcular
             // 
@@ -123,6 +124,7 @@
             this.btnNovo.TabIndex = 63;
             this.btnNovo.Text = "Nova Consulta";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // txtCodPedido
             // 
@@ -142,6 +144,7 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(310, 22);
             this.txtPesquisar.TabIndex = 61;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
             // lblPesquisar
             // 
@@ -243,8 +246,10 @@
             this.dgvPesquisa.Location = new System.Drawing.Point(370, 47);
             this.dgvPesquisa.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPesquisa.Name = "dgvPesquisa";
+            this.dgvPesquisa.ReadOnly = true;
             this.dgvPesquisa.Size = new System.Drawing.Size(606, 185);
             this.dgvPesquisa.TabIndex = 51;
+            this.dgvPesquisa.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvPesquisa_MouseDoubleClick);
             // 
             // gbTipo
             // 
