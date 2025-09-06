@@ -23,5 +23,10 @@ namespace ProjetoVeterinario
             pedido.Show();
             this.Hide();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

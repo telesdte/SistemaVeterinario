@@ -65,6 +65,7 @@
             this.btnSair.TabIndex = 1;
             this.btnSair.Text = "SAIR";
             this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // pictureBox1
             // 
