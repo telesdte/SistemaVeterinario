@@ -47,11 +47,11 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.dgvPesquisa = new System.Windows.Forms.DataGridView();
             this.gbTipo = new System.Windows.Forms.GroupBox();
+            this.rbAve = new System.Windows.Forms.RadioButton();
+            this.rbGato = new System.Windows.Forms.RadioButton();
+            this.rbCachorro = new System.Windows.Forms.RadioButton();
             this.lblPorte = new System.Windows.Forms.Label();
             this.cmbPorte = new System.Windows.Forms.ComboBox();
-            this.rbCachorro = new System.Windows.Forms.RadioButton();
-            this.rbGato = new System.Windows.Forms.RadioButton();
-            this.rbAve = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPesquisa)).BeginInit();
             this.gbTipo.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +60,7 @@
             // 
             this.lblPlano.AutoSize = true;
             this.lblPlano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlano.Location = new System.Drawing.Point(470, 11);
+            this.lblPlano.Location = new System.Drawing.Point(617, 333);
             this.lblPlano.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPlano.Name = "lblPlano";
             this.lblPlano.Size = new System.Drawing.Size(104, 16);
@@ -71,7 +71,7 @@
             // 
             this.lblRaça.AutoSize = true;
             this.lblRaça.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRaça.Location = new System.Drawing.Point(16, 414);
+            this.lblRaça.Location = new System.Drawing.Point(16, 455);
             this.lblRaça.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRaça.Name = "lblRaça";
             this.lblRaça.Size = new System.Drawing.Size(116, 16);
@@ -81,7 +81,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(814, 425);
+            this.btnSair.Location = new System.Drawing.Point(773, 260);
             this.btnSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(96, 39);
@@ -92,42 +92,43 @@
             // btnCalcular
             // 
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(687, 426);
+            this.btnCalcular.Location = new System.Drawing.Point(594, 403);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(96, 39);
+            this.btnCalcular.Size = new System.Drawing.Size(155, 39);
             this.btnCalcular.TabIndex = 65;
-            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.Text = "Calcular Orçamento";
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(549, 425);
+            this.btnSalvar.Location = new System.Drawing.Point(630, 260);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(96, 39);
             this.btnSalvar.TabIndex = 64;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.Location = new System.Drawing.Point(423, 426);
+            this.btnNovo.Location = new System.Drawing.Point(480, 261);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(96, 39);
+            this.btnNovo.Size = new System.Drawing.Size(120, 39);
             this.btnNovo.TabIndex = 63;
-            this.btnNovo.Text = "Novo";
+            this.btnNovo.Text = "Nova Consulta";
             this.btnNovo.UseVisualStyleBackColor = true;
             // 
             // txtCodPedido
             // 
             this.txtCodPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodPedido.Location = new System.Drawing.Point(399, 182);
-            this.txtCodPedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodPedido.Location = new System.Drawing.Point(403, 17);
+            this.txtCodPedido.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodPedido.Name = "txtCodPedido";
             this.txtCodPedido.ReadOnly = true;
             this.txtCodPedido.Size = new System.Drawing.Size(107, 22);
@@ -136,8 +137,8 @@
             // txtPesquisar
             // 
             this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(635, 182);
-            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPesquisar.Location = new System.Drawing.Point(639, 17);
+            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(310, 22);
             this.txtPesquisar.TabIndex = 61;
@@ -146,7 +147,7 @@
             // 
             this.lblPesquisar.AutoSize = true;
             this.lblPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPesquisar.Location = new System.Drawing.Point(535, 185);
+            this.lblPesquisar.Location = new System.Drawing.Point(539, 20);
             this.lblPesquisar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPesquisar.Name = "lblPesquisar";
             this.lblPesquisar.Size = new System.Drawing.Size(98, 16);
@@ -157,7 +158,7 @@
             // 
             this.lblValor.AutoSize = true;
             this.lblValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValor.Location = new System.Drawing.Point(645, 11);
+            this.lblValor.Location = new System.Drawing.Point(616, 457);
             this.lblValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(109, 16);
@@ -167,9 +168,10 @@
             // txtValor
             // 
             this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValor.Location = new System.Drawing.Point(635, 30);
-            this.txtValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtValor.Location = new System.Drawing.Point(606, 476);
+            this.txtValor.Margin = new System.Windows.Forms.Padding(4);
             this.txtValor.Name = "txtValor";
+            this.txtValor.ReadOnly = true;
             this.txtValor.Size = new System.Drawing.Size(132, 22);
             this.txtValor.TabIndex = 58;
             // 
@@ -188,27 +190,29 @@
             // 
             this.txtIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdade.Location = new System.Drawing.Point(16, 91);
-            this.txtIdade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdade.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdade.Name = "txtIdade";
             this.txtIdade.Size = new System.Drawing.Size(132, 22);
             this.txtIdade.TabIndex = 56;
             // 
             // cmbTipo
             // 
+            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(429, 30);
-            this.cmbTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTipo.Location = new System.Drawing.Point(578, 353);
+            this.cmbTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(188, 24);
             this.cmbTipo.TabIndex = 55;
             // 
             // cmbRaça
             // 
+            this.cmbRaça.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRaça.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRaça.FormattingEnabled = true;
-            this.cmbRaça.Location = new System.Drawing.Point(13, 433);
-            this.cmbRaça.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbRaça.Location = new System.Drawing.Point(13, 474);
+            this.cmbRaça.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRaça.Name = "cmbRaça";
             this.cmbRaça.Size = new System.Drawing.Size(230, 24);
             this.cmbRaça.TabIndex = 54;
@@ -228,7 +232,7 @@
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(16, 30);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(230, 22);
             this.txtNome.TabIndex = 52;
@@ -236,8 +240,8 @@
             // dgvPesquisa
             // 
             this.dgvPesquisa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPesquisa.Location = new System.Drawing.Point(366, 212);
-            this.dgvPesquisa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPesquisa.Location = new System.Drawing.Point(370, 47);
+            this.dgvPesquisa.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPesquisa.Name = "dgvPesquisa";
             this.dgvPesquisa.Size = new System.Drawing.Size(606, 185);
             this.dgvPesquisa.TabIndex = 51;
@@ -249,46 +253,25 @@
             this.gbTipo.Controls.Add(this.rbCachorro);
             this.gbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTipo.Location = new System.Drawing.Point(12, 139);
-            this.gbTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbTipo.Margin = new System.Windows.Forms.Padding(4);
             this.gbTipo.Name = "gbTipo";
-            this.gbTipo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbTipo.Padding = new System.Windows.Forms.Padding(4);
             this.gbTipo.Size = new System.Drawing.Size(267, 182);
             this.gbTipo.TabIndex = 50;
             this.gbTipo.TabStop = false;
             this.gbTipo.Text = "Tipo de Animal";
             // 
-            // lblPorte
+            // rbAve
             // 
-            this.lblPorte.AutoSize = true;
-            this.lblPorte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPorte.Location = new System.Drawing.Point(9, 344);
-            this.lblPorte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPorte.Name = "lblPorte";
-            this.lblPorte.Size = new System.Drawing.Size(116, 16);
-            this.lblPorte.TabIndex = 49;
-            this.lblPorte.Text = "Porte do animal";
-            // 
-            // cmbPorte
-            // 
-            this.cmbPorte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPorte.FormattingEnabled = true;
-            this.cmbPorte.Location = new System.Drawing.Point(13, 364);
-            this.cmbPorte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbPorte.Name = "cmbPorte";
-            this.cmbPorte.Size = new System.Drawing.Size(230, 24);
-            this.cmbPorte.TabIndex = 48;
-            // 
-            // rbCachorro
-            // 
-            this.rbCachorro.AutoSize = true;
-            this.rbCachorro.Location = new System.Drawing.Point(7, 47);
-            this.rbCachorro.Name = "rbCachorro";
-            this.rbCachorro.Size = new System.Drawing.Size(88, 20);
-            this.rbCachorro.TabIndex = 0;
-            this.rbCachorro.TabStop = true;
-            this.rbCachorro.Text = "Cachorro";
-            this.rbCachorro.UseVisualStyleBackColor = true;
-            this.rbCachorro.CheckedChanged += new System.EventHandler(this.rbCachorro_CheckedChanged);
+            this.rbAve.AutoSize = true;
+            this.rbAve.Location = new System.Drawing.Point(7, 99);
+            this.rbAve.Name = "rbAve";
+            this.rbAve.Size = new System.Drawing.Size(52, 20);
+            this.rbAve.TabIndex = 2;
+            this.rbAve.TabStop = true;
+            this.rbAve.Text = "Ave";
+            this.rbAve.UseVisualStyleBackColor = true;
+            this.rbAve.CheckedChanged += new System.EventHandler(this.rbAve_CheckedChanged);
             // 
             // rbGato
             // 
@@ -302,17 +285,39 @@
             this.rbGato.UseVisualStyleBackColor = true;
             this.rbGato.CheckedChanged += new System.EventHandler(this.rbGato_CheckedChanged);
             // 
-            // rbAve
+            // rbCachorro
             // 
-            this.rbAve.AutoSize = true;
-            this.rbAve.Location = new System.Drawing.Point(7, 99);
-            this.rbAve.Name = "rbAve";
-            this.rbAve.Size = new System.Drawing.Size(52, 20);
-            this.rbAve.TabIndex = 2;
-            this.rbAve.TabStop = true;
-            this.rbAve.Text = "Ave";
-            this.rbAve.UseVisualStyleBackColor = true;
-            this.rbAve.CheckedChanged += new System.EventHandler(this.rbAve_CheckedChanged);
+            this.rbCachorro.AutoSize = true;
+            this.rbCachorro.Location = new System.Drawing.Point(7, 47);
+            this.rbCachorro.Name = "rbCachorro";
+            this.rbCachorro.Size = new System.Drawing.Size(88, 20);
+            this.rbCachorro.TabIndex = 0;
+            this.rbCachorro.TabStop = true;
+            this.rbCachorro.Text = "Cachorro";
+            this.rbCachorro.UseVisualStyleBackColor = true;
+            this.rbCachorro.CheckedChanged += new System.EventHandler(this.rbCachorro_CheckedChanged);
+            // 
+            // lblPorte
+            // 
+            this.lblPorte.AutoSize = true;
+            this.lblPorte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPorte.Location = new System.Drawing.Point(9, 385);
+            this.lblPorte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPorte.Name = "lblPorte";
+            this.lblPorte.Size = new System.Drawing.Size(116, 16);
+            this.lblPorte.TabIndex = 49;
+            this.lblPorte.Text = "Porte do animal";
+            // 
+            // cmbPorte
+            // 
+            this.cmbPorte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPorte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPorte.FormattingEnabled = true;
+            this.cmbPorte.Location = new System.Drawing.Point(13, 405);
+            this.cmbPorte.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbPorte.Name = "cmbPorte";
+            this.cmbPorte.Size = new System.Drawing.Size(230, 24);
+            this.cmbPorte.TabIndex = 48;
             // 
             // Pedido
             // 
@@ -341,7 +346,7 @@
             this.Controls.Add(this.lblPorte);
             this.Controls.Add(this.cmbPorte);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Pedido";
             this.Text = "Pedido";
             this.Load += new System.EventHandler(this.Pedido_Load);

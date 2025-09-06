@@ -12,6 +12,8 @@ namespace ProjetoVeterinario
 {
     public partial class Pedido : Form
     {
+        Conexao con = new Conexao();
+
         public Pedido()
         {
             InitializeComponent();
@@ -19,11 +21,13 @@ namespace ProjetoVeterinario
 
         private void Pedido_Load(object sender, EventArgs e)
         {
-            //TAMANHO PET
+            //TAMANHO || PORTE DO PET
+            cmbPorte.Items.Add("...");
             cmbPorte.Items.Add("Pequeno (R$20,00)");
             cmbPorte.Items.Add("Médio (R$30,00)");
             cmbPorte.Items.Add("Grande (R$40,00)");
             //PLANO
+            cmbTipo.Items.Add("...");
             cmbTipo.Items.Add("Básico (R$50,00)");
             cmbTipo.Items.Add("Integral (R$100,00)");
             cmbTipo.Items.Add("Preferencial (R$150,00)");
@@ -110,6 +114,29 @@ namespace ProjetoVeterinario
                 cmbRaça.Items.Add("Agapornis");
                 cmbRaça.Items.Add("Cacatua");
                 cmbRaça.Items.Add("Papagaio");
+            }
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            //VERIFICAÇÃO DOS CAMPOS
+            
+            // VERIFICA SE ALGUM ITEM FOI SELECIONADO NO CMBPORTE
+            if (cmbPorte.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, selecione o porte do pet.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbPorte.Focus();
+            }
+
+            // VERIFICA SE ALGUM ITEM FOI SELECIONADO NO CMBTIPO
+            else if (cmbTipo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, selecione o tipo de plano.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbTipo.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
