@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.lblInicio = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -67,40 +67,40 @@
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // pictureBox1
+            // pbLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(548, 431);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
+            this.pbLogo.Location = new System.Drawing.Point(12, 7);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(548, 431);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbLogo.TabIndex = 2;
+            this.pbLogo.TabStop = false;
             // 
-            // label1
+            // lblInicio
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(568, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Olá, seja bem-vindo!";
+            this.lblInicio.AutoSize = true;
+            this.lblInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInicio.Location = new System.Drawing.Point(568, 110);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(229, 25);
+            this.lblInicio.TabIndex = 3;
+            this.lblInicio.Text = "Olá, seja bem-vindo!";
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblInicio);
+            this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,7 +110,7 @@
 
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.Label lblInicio;
     }
 }
