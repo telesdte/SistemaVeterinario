@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace ProjetoVeterinario
 {
     public partial class Pedido : Form
     {
         Conexao con = new Conexao();
+        //VARIÁVEL TEMPORÁRIA PARA ARMAZENAR O TIPO DE ANIMAL SELECIONADO
+        private string tipoAnimal = "";
 
         public Pedido()
         {
@@ -22,12 +25,10 @@ namespace ProjetoVeterinario
         private void Pedido_Load(object sender, EventArgs e)
         {
             //TAMANHO || PORTE DO PET
-            cmbPorte.Items.Add("...");
             cmbPorte.Items.Add("Pequeno (R$20,00)");
             cmbPorte.Items.Add("Médio (R$30,00)");
             cmbPorte.Items.Add("Grande (R$40,00)");
             //PLANO
-            cmbTipo.Items.Add("...");
             cmbTipo.Items.Add("Básico (R$50,00)");
             cmbTipo.Items.Add("Integral (R$100,00)");
             cmbTipo.Items.Add("Preferencial (R$150,00)");
@@ -48,7 +49,7 @@ namespace ProjetoVeterinario
             {
                 valorPorte = 30;
             }
-            else if ( cmbPorte.SelectedIndex == 2)
+            else if (cmbPorte.SelectedIndex == 2)
             {
                 valorPorte = 40;
             }
@@ -86,6 +87,7 @@ namespace ProjetoVeterinario
                 cmbRaça.Items.Add("Beagle");
                 cmbRaça.Items.Add("Golden Retriever");
                 cmbRaça.Items.Add("Rottweiler");
+                tipoAnimal = "Cachorro";
             }
         }
 
@@ -100,6 +102,7 @@ namespace ProjetoVeterinario
                 cmbRaça.Items.Add("Sphynx");
                 cmbRaça.Items.Add("Bengal");
                 cmbRaça.Items.Add("British Shorthair");
+                tipoAnimal = "Gato";
             }
         }
 
@@ -114,13 +117,14 @@ namespace ProjetoVeterinario
                 cmbRaça.Items.Add("Agapornis");
                 cmbRaça.Items.Add("Cacatua");
                 cmbRaça.Items.Add("Papagaio");
+                tipoAnimal = "Ave";
             }
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             //VERIFICAÇÃO DOS CAMPOS
-            
+
             // VERIFICA SE ALGUM ITEM FOI SELECIONADO NO CMBPORTE
             if (cmbPorte.SelectedIndex == -1)
             {
@@ -134,9 +138,42 @@ namespace ProjetoVeterinario
                 MessageBox.Show("Por favor, selecione o tipo de plano.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cmbTipo.Focus();
             }
+            else if (String.IsNullOrEmpty(tipoAnimal))
+            {
+                MessageBox.Show("Por favor, selecione o tipo de animal", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
-                MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //INSERINDO OS DADOS NO SQL
+                try
+                {
+                    string sql = "intert into tbplano(Nome,Idade,Porte,Raca,Plano,Tipo) values(@Nome,@Idade,@Porte,@Raca,@Plano,@Tipo)";
+                    MySqlCommand cmd = new MySqlCommand(sql, con.ConnectarBD());
+                    cmd.Parameters.Add("@Nome", MySqlDbType.VarChar).Value = txtNome;
+                    cmd.Parameters.Add("@Idade", MySqlDbType.Text).Value = txtIdade;
+                    cmd.Parameters.Add("@Porte", MySqlDbType.VarChar).Value = cmbPorte;
+                    cmd.Parameters.Add("@Raca", MySqlDbType.VarChar).Value = cmbRaça;
+                    cmd.Parameters.Add("@Plano", MySqlDbType.VarChar).Value = cmbTipo;
+                    cmd.Parameters.Add("@Tipo", MySqlDbType.VarChar).Value = tipoAnimal;
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNome.Text = "";
+                    txtIdade.Text = "";
+                    rbCachorro.Enabled = false;
+                    rbGato.Enabled = false;
+                    rbAve.Enabled = false;
+                    cmbPorte.Enabled = false;
+                    cmbRaça.Enabled = false;
+                    cmbTipo.Enabled = false;
+                    txtNome.Focus();
+                    con.DesconnectarBD();
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show(erro.Message);
+                }
+
             }
         }
     }
