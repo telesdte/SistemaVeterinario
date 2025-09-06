@@ -1,36 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Matheus\\Desktop\\Veterinario\\ProjetoVeterinario\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E23B2E4E-3B34-4524-BF0E-56D76EDB3BE2}|ProjetoVeterinario\\ProjetoVeterinario.csproj|c:\\users\\matheus\\desktop\\veterinario\\projetoveterinario\\projetoveterinario\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E23B2E4E-3B34-4524-BF0E-56D76EDB3BE2}|ProjetoVeterinario\\ProjetoVeterinario.csproj|solutionrelative:projetoveterinario\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Matheus\\Desktop\\Veterinario\\ProjetoVeterinario\\ProjetoVeterinario\\Form1.cs",
-              "RelativeDocumentMoniker": "ProjetoVeterinario\\Form1.cs",
-              "ToolTip": "C:\\Users\\Matheus\\Desktop\\Veterinario\\ProjetoVeterinario\\ProjetoVeterinario\\Form1.cs [Design]",
-              "RelativeToolTip": "ProjetoVeterinario\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T13:37:12.569Z",
-              "EditorCaption": " [Design]"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
