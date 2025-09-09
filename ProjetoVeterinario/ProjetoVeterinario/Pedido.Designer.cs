@@ -64,10 +64,11 @@
             this.rbAve.Location = new System.Drawing.Point(7, 99);
             this.rbAve.Name = "rbAve";
             this.rbAve.Size = new System.Drawing.Size(52, 20);
-            this.rbAve.TabIndex = 2;
+            this.rbAve.TabIndex = 4;
             this.rbAve.TabStop = true;
             this.rbAve.Text = "Ave";
             this.rbAve.UseVisualStyleBackColor = true;
+            this.rbAve.Click += new System.EventHandler(this.rbAve_CheckedChanged);
             // 
             // rbGato
             // 
@@ -76,10 +77,11 @@
             this.rbGato.Location = new System.Drawing.Point(7, 73);
             this.rbGato.Name = "rbGato";
             this.rbGato.Size = new System.Drawing.Size(58, 20);
-            this.rbGato.TabIndex = 1;
+            this.rbGato.TabIndex = 3;
             this.rbGato.TabStop = true;
             this.rbGato.Text = "Gato";
             this.rbGato.UseVisualStyleBackColor = true;
+            this.rbGato.Click += new System.EventHandler(this.rbGato_CheckedChanged);
             // 
             // rbCachorro
             // 
@@ -88,10 +90,11 @@
             this.rbCachorro.Location = new System.Drawing.Point(7, 47);
             this.rbCachorro.Name = "rbCachorro";
             this.rbCachorro.Size = new System.Drawing.Size(88, 20);
-            this.rbCachorro.TabIndex = 0;
+            this.rbCachorro.TabIndex = 2;
             this.rbCachorro.TabStop = true;
             this.rbCachorro.Text = "Cachorro";
             this.rbCachorro.UseVisualStyleBackColor = true;
+            this.rbCachorro.Click += new System.EventHandler(this.rbCachorro_CheckedChanged);
             // 
             // lblPlano
             // 
@@ -128,9 +131,10 @@
             this.btnSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(154, 39);
-            this.btnSair.TabIndex = 87;
+            this.btnSair.TabIndex = 12;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnCalcular
             // 
@@ -143,9 +147,10 @@
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(235, 39);
-            this.btnCalcular.TabIndex = 86;
+            this.btnCalcular.TabIndex = 8;
             this.btnCalcular.Text = "Calcular Orçamento";
             this.btnCalcular.UseVisualStyleBackColor = false;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnSalvar
             // 
@@ -158,9 +163,10 @@
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(154, 39);
-            this.btnSalvar.TabIndex = 85;
+            this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovo
             // 
@@ -173,9 +179,10 @@
             this.btnNovo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(178, 39);
-            this.btnNovo.TabIndex = 84;
+            this.btnNovo.TabIndex = 10;
             this.btnNovo.Text = "Nova Consulta";
             this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // txtCodPedido
             // 
@@ -186,6 +193,7 @@
             this.txtCodPedido.ReadOnly = true;
             this.txtCodPedido.Size = new System.Drawing.Size(107, 22);
             this.txtCodPedido.TabIndex = 83;
+            this.txtCodPedido.TabStop = false;
             // 
             // txtPesquisar
             // 
@@ -194,7 +202,8 @@
             this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(310, 22);
-            this.txtPesquisar.TabIndex = 82;
+            this.txtPesquisar.TabIndex = 11;
+            this.txtPesquisar.Click += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
             // lblPesquisar
             // 
@@ -230,6 +239,7 @@
             this.txtValor.ReadOnly = true;
             this.txtValor.Size = new System.Drawing.Size(132, 31);
             this.txtValor.TabIndex = 79;
+            this.txtValor.TabStop = false;
             // 
             // lblIdade
             // 
@@ -250,7 +260,7 @@
             this.txtIdade.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdade.Name = "txtIdade";
             this.txtIdade.Size = new System.Drawing.Size(132, 22);
-            this.txtIdade.TabIndex = 77;
+            this.txtIdade.TabIndex = 1;
             // 
             // cmbTipo
             // 
@@ -261,7 +271,7 @@
             this.cmbTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(188, 24);
-            this.cmbTipo.TabIndex = 76;
+            this.cmbTipo.TabIndex = 7;
             // 
             // cmbRaça
             // 
@@ -272,7 +282,7 @@
             this.cmbRaça.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRaça.Name = "cmbRaça";
             this.cmbRaça.Size = new System.Drawing.Size(230, 24);
-            this.cmbRaça.TabIndex = 75;
+            this.cmbRaça.TabIndex = 6;
             // 
             // lblNome
             // 
@@ -293,7 +303,7 @@
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(230, 22);
-            this.txtNome.TabIndex = 73;
+            this.txtNome.TabIndex = 0;
             // 
             // dgvPesquisa
             // 
@@ -304,6 +314,7 @@
             this.dgvPesquisa.ReadOnly = true;
             this.dgvPesquisa.Size = new System.Drawing.Size(606, 185);
             this.dgvPesquisa.TabIndex = 72;
+            this.dgvPesquisa.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvPesquisa_MouseDoubleClick);
             // 
             // gbTipo
             // 
@@ -342,7 +353,7 @@
             this.cmbPorte.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPorte.Name = "cmbPorte";
             this.cmbPorte.Size = new System.Drawing.Size(230, 24);
-            this.cmbPorte.TabIndex = 69;
+            this.cmbPorte.TabIndex = 5;
             // 
             // Pedido
             // 
@@ -372,8 +383,10 @@
             this.Controls.Add(this.lblPorte);
             this.Controls.Add(this.cmbPorte);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Pedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedido";
             this.Load += new System.EventHandler(this.Pedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPesquisa)).EndInit();

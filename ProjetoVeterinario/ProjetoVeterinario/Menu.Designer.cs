@@ -66,9 +66,10 @@
             this.btnSair.Location = new System.Drawing.Point(604, 247);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(151, 39);
-            this.btnSair.TabIndex = 5;
+            this.btnSair.TabIndex = 1;
             this.btnSair.Text = "SAIR";
             this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnCadastrar
             // 
@@ -80,10 +81,11 @@
             this.btnCadastrar.Location = new System.Drawing.Point(604, 188);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(151, 39);
-            this.btnCadastrar.TabIndex = 4;
+            this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // Menu
             // 
@@ -95,6 +97,7 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastrar);
             this.Name = "Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
