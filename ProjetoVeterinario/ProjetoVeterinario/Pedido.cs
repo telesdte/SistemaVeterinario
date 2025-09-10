@@ -2,6 +2,8 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace ProjetoVeterinario
 {
@@ -116,16 +118,50 @@ namespace ProjetoVeterinario
             }
         }
 
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //VERIFICA SE O CARACTERE DIGITADO É LETRA, CONTROLE OU ESPAÇO
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true; //BLOQUEIA O CARACTERE
+            }
+        }
+
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             //VERIFICAÇÃO DOS CAMPOS
-            //VERIFICA SE A IDADE INSERIDA É TIPO INT
-            if (!int.TryParse(txtIdade.Text, out int idade))
+
+            if (string.IsNullOrWhiteSpace(txtNome.Text))
             {
-                MessageBox.Show("Idade inválida! Digite apenas números inteiros.");
+                MessageBox.Show("Por favor, insira o nome do pet.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNome.Focus();
+                return;
+            }
+
+            //VERIFICA SE A IDADE ESTÁ PREENCHIDA
+            if (string.IsNullOrWhiteSpace(txtIdade.Text))
+            {
+                MessageBox.Show("Por favor, insira a idade do pet.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtIdade.Focus();
                 return;
             }
+
+            //VERIFICA SE A IDADE INSERIDA É TIPO INT
+            if (!int.TryParse(txtIdade.Text, out int idade))
+            {
+                MessageBox.Show("Idade inválida! Digite apenas números inteiros.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtIdade.Focus();
+                return;
+            }
+
+            //VERIFICA SE NENHUM RADIO BUTTON ESTÁ SELECIONADO
+            if (!rbCachorro.Checked && !rbGato.Checked && !rbAve.Checked)
+            {
+                MessageBox.Show("Selecione uma opção antes de continuar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             // VERIFICA SE ALGUM ITEM FOI SELECIONADO NO CMBPORTE
             if (cmbPorte.SelectedIndex == -1)
             {

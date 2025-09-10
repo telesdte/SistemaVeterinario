@@ -101,7 +101,7 @@
             this.lblPlano.AutoSize = true;
             this.lblPlano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlano.ForeColor = System.Drawing.Color.White;
-            this.lblPlano.Location = new System.Drawing.Point(632, 338);
+            this.lblPlano.Location = new System.Drawing.Point(28, 480);
             this.lblPlano.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPlano.Name = "lblPlano";
             this.lblPlano.Size = new System.Drawing.Size(104, 16);
@@ -113,7 +113,7 @@
             this.lblRaça.AutoSize = true;
             this.lblRaça.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRaça.ForeColor = System.Drawing.Color.White;
-            this.lblRaça.Location = new System.Drawing.Point(31, 460);
+            this.lblRaça.Location = new System.Drawing.Point(29, 415);
             this.lblRaça.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRaça.Name = "lblRaça";
             this.lblRaça.Size = new System.Drawing.Size(116, 16);
@@ -127,7 +127,7 @@
             this.btnSair.ForeColor = System.Drawing.Color.White;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(794, 266);
+            this.btnSair.Location = new System.Drawing.Point(794, 287);
             this.btnSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(154, 39);
@@ -143,7 +143,7 @@
             this.btnCalcular.ForeColor = System.Drawing.Color.White;
             this.btnCalcular.Image = ((System.Drawing.Image)(resources.GetObject("btnCalcular.Image")));
             this.btnCalcular.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalcular.Location = new System.Drawing.Point(571, 410);
+            this.btnCalcular.Location = new System.Drawing.Point(403, 488);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(235, 39);
@@ -159,7 +159,7 @@
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(621, 266);
+            this.btnSalvar.Location = new System.Drawing.Point(621, 287);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(154, 39);
@@ -175,7 +175,7 @@
             this.btnNovo.ForeColor = System.Drawing.Color.White;
             this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovo.Location = new System.Drawing.Point(421, 266);
+            this.btnNovo.Location = new System.Drawing.Point(421, 287);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(178, 39);
@@ -187,7 +187,7 @@
             // txtCodPedido
             // 
             this.txtCodPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodPedido.Location = new System.Drawing.Point(418, 22);
+            this.txtCodPedido.Location = new System.Drawing.Point(415, 35);
             this.txtCodPedido.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodPedido.Name = "txtCodPedido";
             this.txtCodPedido.ReadOnly = true;
@@ -198,7 +198,7 @@
             // txtPesquisar
             // 
             this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(654, 22);
+            this.txtPesquisar.Location = new System.Drawing.Point(651, 35);
             this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(310, 22);
@@ -210,7 +210,7 @@
             this.lblPesquisar.AutoSize = true;
             this.lblPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPesquisar.ForeColor = System.Drawing.Color.White;
-            this.lblPesquisar.Location = new System.Drawing.Point(554, 25);
+            this.lblPesquisar.Location = new System.Drawing.Point(551, 38);
             this.lblPesquisar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPesquisar.Name = "lblPesquisar";
             this.lblPesquisar.Size = new System.Drawing.Size(98, 16);
@@ -220,20 +220,20 @@
             // lblValor
             // 
             this.lblValor.AutoSize = true;
-            this.lblValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValor.ForeColor = System.Drawing.Color.White;
-            this.lblValor.Location = new System.Drawing.Point(631, 462);
+            this.lblValor.Location = new System.Drawing.Point(677, 499);
             this.lblValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(109, 16);
+            this.lblValor.Size = new System.Drawing.Size(113, 16);
             this.lblValor.TabIndex = 80;
-            this.lblValor.Text = "Valor do plano";
+            this.lblValor.Text = "Valor do plano:";
             // 
             // txtValor
             // 
             this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtValor.Location = new System.Drawing.Point(621, 481);
+            this.txtValor.Location = new System.Drawing.Point(794, 493);
             this.txtValor.Margin = new System.Windows.Forms.Padding(4);
             this.txtValor.Name = "txtValor";
             this.txtValor.ReadOnly = true;
@@ -267,10 +267,10 @@
             this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(593, 358);
+            this.cmbTipo.Location = new System.Drawing.Point(27, 500);
             this.cmbTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(188, 24);
+            this.cmbTipo.Size = new System.Drawing.Size(230, 24);
             this.cmbTipo.TabIndex = 7;
             // 
             // cmbRaça
@@ -278,7 +278,7 @@
             this.cmbRaça.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRaça.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRaça.FormattingEnabled = true;
-            this.cmbRaça.Location = new System.Drawing.Point(28, 479);
+            this.cmbRaça.Location = new System.Drawing.Point(26, 434);
             this.cmbRaça.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRaça.Name = "cmbRaça";
             this.cmbRaça.Size = new System.Drawing.Size(230, 24);
@@ -304,15 +304,16 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(230, 22);
             this.txtNome.TabIndex = 0;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // dgvPesquisa
             // 
             this.dgvPesquisa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPesquisa.Location = new System.Drawing.Point(385, 52);
+            this.dgvPesquisa.Location = new System.Drawing.Point(383, 65);
             this.dgvPesquisa.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPesquisa.Name = "dgvPesquisa";
             this.dgvPesquisa.ReadOnly = true;
-            this.dgvPesquisa.Size = new System.Drawing.Size(606, 185);
+            this.dgvPesquisa.Size = new System.Drawing.Size(606, 216);
             this.dgvPesquisa.TabIndex = 72;
             this.dgvPesquisa.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvPesquisa_MouseDoubleClick);
             // 
@@ -337,7 +338,7 @@
             this.lblPorte.AutoSize = true;
             this.lblPorte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorte.ForeColor = System.Drawing.Color.White;
-            this.lblPorte.Location = new System.Drawing.Point(24, 390);
+            this.lblPorte.Location = new System.Drawing.Point(23, 348);
             this.lblPorte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPorte.Name = "lblPorte";
             this.lblPorte.Size = new System.Drawing.Size(116, 16);
@@ -349,7 +350,7 @@
             this.cmbPorte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPorte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPorte.FormattingEnabled = true;
-            this.cmbPorte.Location = new System.Drawing.Point(28, 410);
+            this.cmbPorte.Location = new System.Drawing.Point(27, 368);
             this.cmbPorte.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPorte.Name = "cmbPorte";
             this.cmbPorte.Size = new System.Drawing.Size(230, 24);
@@ -385,6 +386,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "Pedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedido";

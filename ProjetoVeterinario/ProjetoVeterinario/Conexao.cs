@@ -9,7 +9,7 @@ namespace ProjetoVeterinario
 {
     internal class Conexao
     {
-        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=dbveterinario;user=root;pwd=123456");
+        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=db_veterinario2;user=root;pwd=123456");
 
         public static string msg;
 
